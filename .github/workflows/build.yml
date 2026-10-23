@@ -1,0 +1,28 @@
+name: Build ScopeMaster
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -S ScopeMaster -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build VST3
+        run: cmake --build build --config Release --target ScopeMaster_VST3
+
+      - name: Upload VST3 plugin
+        uses: actions/upload-artifact@v4
+        with:
+          name: ScopeMaster-VST3
+          path: build/ScopeMaster_artefacts/Release/VST3/
+          if-no-files-found: error
