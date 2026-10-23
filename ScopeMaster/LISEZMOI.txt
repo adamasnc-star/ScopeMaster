@@ -1,0 +1,10 @@
+Scope Master - analyseur de master pour FL Studio (Mac)
+
+1. Cree un compte sur github.com (gratuit), puis New repository > nom "ScopeMaster" > Public > Create.
+2. Clique "uploading an existing file", glisse tout le contenu de ce dossier (Finder : Cmd+Maj+. pour voir le dossier .github) > Commit changes.
+3. Onglet Actions : attends la coche verte (5 a 10 minutes).
+4. Page d'accueil du depot > Releases (colonne de droite) > telecharge ScopeMaster.pkg.
+5. Double-clique le pkg. S'il est bloque : Reglages Systeme > Confidentialite et securite > en bas "Ouvrir quand meme".
+6. FL Studio > Options > Manage plugins > Find installed plugins. Mets "Scope Master" en dernier sur le Master.
+
+Dans le plug-in : clic sur le spectre = change la pente (+3 / +4,5 / 0 dB par octave). Clic ailleurs = remet les mesures a zero.
